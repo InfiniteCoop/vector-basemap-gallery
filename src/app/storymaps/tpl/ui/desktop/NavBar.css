@@ -39,18 +39,24 @@
  */
 
 .nav-bar.isTab .nav-tabs > li > a,
-.nav-bar.isTab .dropdown-toggle {
+.nav-bar.isTab .dropdown-toggle,
+.nav-bar.isTab .nav-tabs li.active > a,
+.nav-bar.isTab .nav-tabs li > a:hover {
 	font-family: 'Oswald', open-sans;
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	padding: 7px 12px 10px 12px;
+	padding: 9px 12px 10px 12px;
 	text-align: center;
 	border-radius: 0;
+	height: 40px;
+    margin-left: 2px;
+    margin-right: 0px;
+    border: none !important;
 }
 
 .nav-bar.isTab .entry:first-child .entryLbl {
-	margin-left: 0;
+	margin-left: 0px !important;
 }
 
 .nav-bar .nav-tabs .visible {
