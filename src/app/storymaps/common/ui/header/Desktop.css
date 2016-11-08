@@ -22,7 +22,7 @@
 }
 
 #headerDesktop.compact {
-	height: 60px;
+	height: 80px;
 }
 
 #header.hideDesktop {
@@ -40,7 +40,7 @@
 #headerDesktop .title {
 	height: 45px;
 	padding-top: 3px;
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: normal;
 	text-align: left;
 	overflow: hidden;
@@ -91,7 +91,7 @@
 	position: absolute;
 	right: 0px;
 	top: 0px;
-	padding-top: 22px;
+	padding-top: 30px;
 	padding-right: 20px;
 	text-align: right;
 }
@@ -251,7 +251,7 @@
 }
 
 #headerDesktop .textArea {
-	padding-top: 10px;
+	padding-top: 18px;
 	padding-left: 16px;
 	width: 70%;
 }
