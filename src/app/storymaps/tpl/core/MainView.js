@@ -305,7 +305,8 @@ define(["lib-build/css!./MainView",
 						autoResize: false,
 						showAttribution: true,
 						infoWindow: popup,
-						extent: extent
+						extent: extent,
+						smartNavigation: false
 					},
 					usePopupManager: true,
 					ignorePopups: false,
