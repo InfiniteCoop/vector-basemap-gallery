@@ -1,6 +1,6 @@
 .descLegendPanel {
 	width: 200px;
-	border-radius: 0 0 20px 0;
+	border-radius: 0px;
 	max-height: 100%;
 	overflow-y: auto;
 }
@@ -20,17 +20,20 @@ body.has-builder-mask .descLegendPanel {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	opacity: 0.9;
+	background-color: rgba(255,255,255,0.8) !important;
 }
 
 .descLegendPanel .descriptions,
 .descLegendPanel .legends {
 	opacity: 0.99;
+	font-size: 1.1em !important;
+	font-weight: 300 !important;
+	color: #444 !important;
 }
 	
 body.layout-tab-right .descLegendPanel,
 body.layout-bullet-right .descLegendPanel {
-	border-radius: 0 0 0 20px;
+	border-radius: 0px;
 }
 
 .descLegendPanel.no-radius {
