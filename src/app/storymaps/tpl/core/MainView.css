@@ -1,3 +1,32 @@
+#btn-toggle {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	height: 100px;
+	width: 100px;
+	line-height: 100px;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 1px 2px 4px rgba(40,40,40,0.4);
+	color: #444;
+	text-align: center;
+	z-index: 4;
+}
+
+#btn-toggle:hover {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.btn-text {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px 4px;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	line-height: normal;
+	margin: 0 auto;
+}
+
 /*
  * Using a table to properly align Side Accordion Panel and Main Stage seems to be 
  * the only way to have the edit button to properly overflow the Side Panel

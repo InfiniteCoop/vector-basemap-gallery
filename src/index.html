@@ -173,6 +173,9 @@
 						<div id="mainStagePanelInner">
 							<!-- Maps and media are injected here -->
 							<div class="medias"></div>
+							<div id="btn-toggle" class="">
+								<div class="btn-text">Toggle terrain visibility</div>
+							</div>
 							<!-- Loading -->
 							<div id="mainStageLoadingIndicator" class="loadingIndicator">
 								<img src="resources/tpl/viewer/icons/loading-light.gif" />
@@ -296,6 +299,39 @@
 					 * Custom Javascript to be executed when the application is ready goes here
 					 */
 				});
+
+
+			    /*
+			     * Button to toggle visibility of terrain layer
+			     */
+
+			    var WEBMAP_ID = "94c711c058934e40a6686b3c777b39f1";
+			    var LAYER_ID = "World_Hillshade_3197";
+
+			    var clickHandlerIsSetup = false;
+
+			    topic.subscribe("story-loaded-map", function(result){
+
+		            var map = app.maps[result.id].response.map,
+		                layer = map.getLayer(LAYER_ID);
+
+			    	$('#btn-toggle').click(function(e){
+
+			    		console.log("Button clicked");
+			    		console.log(map.layerIds);
+
+				        if ($(this).hasClass("on"))
+				        {
+							$(this).removeClass("on");
+							layer.hide()
+						}
+
+						else {
+							$(this).addClass("on");
+							layer.show();
+						}
+					});
+			    });
 			});
 		</script>
 	</body>
