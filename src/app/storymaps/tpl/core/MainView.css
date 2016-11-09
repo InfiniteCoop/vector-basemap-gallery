@@ -12,9 +12,15 @@
 	z-index: 4;
 }
 
-#btn-toggle:hover {
-	background-color: #fff;
+#btn-toggle:hover, #btn-toggle.on:hover {
+	background-color: rgba(105,185,210,0.8);
+	color: #fff;
 	cursor: pointer;
+}
+
+#btn-toggle.on {
+	background-color: rgba(36,122,179,0.8);
+	color: #fff;
 }
 
 .btn-text {
@@ -25,6 +31,20 @@
 	text-transform: uppercase;
 	line-height: normal;
 	margin: 0 auto;
+}
+
+.esriSimpleSlider {
+	border: 0 !important;
+	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	-o-border-radius: 0 !important;
+	background-color: rgba(255,255,255,0.8) !important;
+	box-shadow: 1px 2px 4px rgba(40,40,40,0.4) !important;
+}
+
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton {
+	border-bottom: 1px solid rgba(40,40,40,0.6) !important;
 }
 
 /*
