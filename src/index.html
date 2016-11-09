@@ -292,51 +292,30 @@
 				/*
 				 * Custom Javascript to be executed while the application is initializing goes here
 				 */
-				
-				// The application is ready
-				topic.subscribe("tpl-ready", function(){
-					/*
-					 * Custom Javascript to be executed when the application is ready goes here
-					 */
-
-
-				});
-
-
-			    /*
-			     * Button to toggle visibility of terrain layer
-			     */
 
 			    var WEBMAP_ID = "94c711c058934e40a6686b3c777b39f1";
 			    var LAYER_ID = "World_Hillshade_3197";
 
+				var _layer;
+				 
+				// The application is ready
+				topic.subscribe("tpl-ready", function(){
+					_layer = app.maps[WEBMAP_ID].response.map.getLayer(LAYER_ID);
+					/*
+					 * Button to toggle visibility of terrain layer
+					 */
+			    	$('#btn-toggle').click(function(e){
+						$("#btn-toggle").toggleClass("on");
+						_layer.setVisibility($("#btn-toggle").hasClass("on"));
+					});					 					 
+				});
 
 			    topic.subscribe("story-loaded-map", function(result){
-
-			    	$('#btn-toggle').removeClass('on');
-
-			    	console.log('Story Map Has Loaded')
-
-		            var map = app.maps[result.id].response.map,
-		                layer = map.getLayer(LAYER_ID);
-
-			    	$('#btn-toggle').click(function(e){
-
-			    		console.log("Button clicked");
-			    		console.log(map.layerIds);
-
-				        if ($('#btn-toggle').hasClass("on"))
-				        {
-							$('#btn-toggle').removeClass("on");
-							layer.hide()
-						}
-
-						else {
-							$('#btn-toggle').addClass("on");
-							layer.show();
-						}
-					});
+					if (_layer) {
+						_layer.setVisibility($("#btn-toggle").hasClass("on"));
+					}
 			    });
+				
 			});
 		</script>
 	</body>
