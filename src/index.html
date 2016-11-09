@@ -298,6 +298,8 @@
 					/*
 					 * Custom Javascript to be executed when the application is ready goes here
 					 */
+
+
 				});
 
 
@@ -308,9 +310,12 @@
 			    var WEBMAP_ID = "94c711c058934e40a6686b3c777b39f1";
 			    var LAYER_ID = "World_Hillshade_3197";
 
-			    var clickHandlerIsSetup = false;
 
 			    topic.subscribe("story-loaded-map", function(result){
+
+			    	$('#btn-toggle').removeClass('on');
+
+			    	console.log('Story Map Has Loaded')
 
 		            var map = app.maps[result.id].response.map,
 		                layer = map.getLayer(LAYER_ID);
@@ -320,14 +325,14 @@
 			    		console.log("Button clicked");
 			    		console.log(map.layerIds);
 
-				        if ($(this).hasClass("on"))
+				        if ($('#btn-toggle').hasClass("on"))
 				        {
-							$(this).removeClass("on");
+							$('#btn-toggle').removeClass("on");
 							layer.hide()
 						}
 
 						else {
-							$(this).addClass("on");
+							$('#btn-toggle').addClass("on");
 							layer.show();
 						}
 					});
