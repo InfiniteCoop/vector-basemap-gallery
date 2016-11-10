@@ -10,17 +10,17 @@
 	color: #444;
 	text-align: center;
 	z-index: 4;
-}
-
-#btn-toggle:hover, #btn-toggle.on:hover {
-	background-color: rgba(105,185,210,0.8);
-	color: #fff;
 	cursor: pointer;
 }
 
 #btn-toggle.on {
-	background-color: rgba(36,122,179,0.8);
+	background-color: rgba(105,185,210,0.8);
 	color: #fff;
+}
+
+#btn-toggle:hover {
+	box-shadow: 1px 2px 7px rgba(40,40,40,0.6);
+}
 }
 
 .btn-text {
