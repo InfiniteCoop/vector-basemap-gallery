@@ -26,7 +26,8 @@ body.has-builder-mask .descLegendPanel {
 .descLegendPanel .descriptions,
 .descLegendPanel .legends {
 	opacity: 0.99;
-	font-size: 1.1em !important;
+	font-size: 1.2em !important;
+	line-height: 1.6em !important;
 	font-weight: 300 !important;
 	color: #444 !important;
 }

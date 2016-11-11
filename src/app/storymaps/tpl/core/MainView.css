@@ -21,9 +21,8 @@
 #btn-toggle:hover {
 	box-shadow: 1px 2px 7px rgba(40,40,40,0.6);
 }
-}
 
-.btn-text {
+#btn-text {
 	display: inline-block;
 	vertical-align: middle;
 	padding: 0px 4px;
