@@ -1,6 +1,7 @@
 .footerMobile {
 	display: none;
 	height: 70px;
+	background-color: rgba(255,255,255,1) !important;
 }
 
 /*
@@ -30,7 +31,8 @@
  */
 
 .footerMobile .tooltip {
-	opacity: 1.0;
+	opacity: 0.9;
+	z-index: 940;
 }
 
 .footerTooltip {
@@ -50,6 +52,7 @@
 .footerMobile .entry {
 	padding: 5px 10px;
 	text-align: center;
+	color: #444 !important;
 }
 
 .footerMobile.hasDesktopBtn .entry {
@@ -64,7 +67,7 @@
 }
 
 .footerMobile .title {
-	font-family: 'open_sanssemibold', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-size: 2em;
 }
 

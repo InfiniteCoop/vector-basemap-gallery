@@ -11,7 +11,8 @@
 .headerMobile .header {
 	height: 40px;
 	padding: 5px 10px;
-	font-size: 1.7em;
+	font-size: 1.6em;
+	color: #444 !important;
 }
 
 .headerMobile .titleArea,
@@ -93,6 +94,10 @@ body:not(.hasTouch) .headerMobile .glyphicon:hover {
 	opacity: 1.0;
 }
 
+.mobilePopup {
+	background-color: rgba(255,255,255,0.8) !important;
+}
+
 /*
  * Menu
  */
@@ -110,7 +115,8 @@ body:not(.hasTouch) .headerMobile .glyphicon:hover {
 	overflow-y: auto;
 	/* on top of footer tooltip */
 	z-index: 1100;
-	background-color: #CCC;
+	background-color: #fff !important;
+	color: #444 !important;
 }
 
 .headerMobile .menu-header .linkContainer a {
@@ -137,11 +143,15 @@ body:not(.hasTouch) .headerMobile .glyphicon:hover {
 }
 
 .headerMobile .menu-entry {
+	text-align: center;
+	font-size: 1.4em;
 	padding: 5px;
 	border-bottom: 1px solid grey;
+	font-weight: bolder;
 }
 
 .headerMobile .menu-entry:not(.active) {
+	font-weight: normal;
 	cursor: pointer;
 }
 
