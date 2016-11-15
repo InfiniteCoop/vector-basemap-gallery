@@ -92,7 +92,7 @@
 			};
 		</script>
 	</head>
-	<body class="claro">
+	<body class="calcite">
 		<style>
 			/* CUSTOM CSS RULES */
 			
@@ -294,18 +294,35 @@
 		
 		<script type="text/javascript" src="app/main-config.js"></script>
 		<script type="text/javascript">
-			require(["dojo/topic"], function(topic) {
+			require(["dojo/topic","dijit/Dialog"], function(topic, Dialog) {
 				/*
 				 * Custom Javascript to be executed while the application is initializing goes here
 				 */
+
+				var splashPage = new Dialog ({
+				      title: 'Toward a Better Basemap: Custom Vector Tiles',
+				      content: '<p>Let\'s talk about basemaps for a minute. These under-appreciated reference layers can have an outsized influence on the look and feel, the legibility, and the lasting impact of your interactive webmaps. An effective basemap should provide just enough geographic information to orient viewers and contextualize thematic data overlays, but should not distract from the map\'s key messages. An effective basemap should also contribute to, or at the very least harmonize with, the visual language and character of your webmap.</p><br /><p>Tempting though it may be to simply select one of the default ArcGIS basemaps and get on with it, there are plenty of alternatives—some of which may be better-suited for your particular webmap. Indeed, with the advent of <a href="https://en.wikipedia.org/wiki/Vector_tiles" target="_blank">vector tiles</a>, it is now easier than ever before to create effective, visually striking basemaps that work well across geographies, scales, and themes.</p><br /><p>The vector basemaps in this gallery were designed for use in <a href="http://storymaps.arcgis.com/">Story Maps</a>, and aim to complement, rather than obscure, your thematic data. These layers are fully public, and you are welcome (and encouraged!) to use them in your own web mapping projects. If you\'re feeling particularly daring, you can even design your own custom basemaps using <a href="http://maps.esri.com/AGSJS_Demos/templates/VectorBasemapStyleEditor/index.html" target="_blank">these</a> <a href="http://esri.github.io/arcgis-vectortile-style-editor/" target="_blank">two</a> vector tile style editors. Get mapping!</p><br /><div class="splash-close">Close</div>',
+				      style: 'width: 500px; height: auto;'
+				    });
+
+				    splashPage.show();	
+
+		 
 
 			    var WEBMAP_ID = "94c711c058934e40a6686b3c777b39f1";
 			    var LAYER_ID = "World_Hillshade_3197";
 
 				var _layer;
+
 				 
 				// The application is ready
 				topic.subscribe("tpl-ready", function(){
+
+				    $('.splash-close').click(function(e){
+				    	splashPage.hide();
+				    });
+
+
 					_layer = app.maps[WEBMAP_ID].response.map.getLayer(LAYER_ID);
 					/*
 					 * Button to toggle visibility of terrain layer
