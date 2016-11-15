@@ -6,7 +6,7 @@ define({
 			},
 			loading: {
 				long: "Story is initializing",
-				long2: "Thanks for waiting",
+				long2: "",
 				failButton: "Reload the story"
 			},
 			signin: {
